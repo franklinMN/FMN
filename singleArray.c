@@ -1,13 +1,17 @@
 #include<stdio.h>
 
+void displayArray( int arr[], int s ) {
+    for ( int i=0 ; i<s ; i++ ) {
+        printf( "Value[%d] is %d\n", i , arr[i] );
+    }
+}
+
 int main() {
     int array[] = { 10, 1, 15, -10, -1 };
 
     int size = sizeof(array) / sizeof(array[0]);
 
-    for ( int i=0 ; i<size ; i++ ) {
-        printf( "Value[%d] is %d\n", i , array[i] );
-    }
+    displayArray( array, size );
 
     printf( "Sorting Process...\n" );
 
@@ -24,7 +28,5 @@ int main() {
 
     printf( "After Sorting Process...\n" );
 
-    for ( int i=0 ; i<size ; i++ ) {
-        printf( "Value[%d] is %d\n", i , array[i] );
-    }
+    displayArray( array, size );
 }
