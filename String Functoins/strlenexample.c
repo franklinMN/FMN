@@ -1,5 +1,5 @@
 #include<stdio.h>
-
+#include<conio.h>
 int strlenExample( char arr[] ) {
     printf( "\n%s\n", arr );
 
@@ -13,5 +13,6 @@ int main () {
     char array[] = "FranklinMarianayagam";
     int length = strlenExample( array );
     printf( "Lenght of the given string %s is %d.\n", array, length );
+    getch();
     return 0;
 }

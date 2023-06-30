@@ -1,12 +1,12 @@
 #include<stdio.h>
-
+#include<conio.h>
 char* strlwrExample( char arr[] );
 
 int main() {
     char array[] = "Franklin Maria Nayagam S";
     char* resultArray = strlwrExample( array );
     printf("Result array: %s\n",resultArray);
-
+    getch();
 }
 
 char* strlwrExample( char arr[] ) {

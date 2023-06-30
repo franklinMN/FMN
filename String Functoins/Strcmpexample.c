@@ -1,5 +1,5 @@
 #include<stdio.h>
-
+#include<conio.h>
 int strcmpExample( char s1[], char s2[] ) {
 
     int result = 0;
@@ -24,4 +24,5 @@ void main () {
     }else {
         printf("The string is not equal\n");
     }
+    getch();
 }

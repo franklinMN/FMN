@@ -1,12 +1,12 @@
 #include<stdio.h>
-
+#include<conio.h>
 char* struprExample( char arr[] );
 
 int main() {
     char array[] = "Franklin Maria Nayagam S";
     char* resultArray = struprExample( array );
     printf("Result array: %s\n",resultArray);
-
+    getch();
 }
 
 char* struprExample( char arr[] ) {
