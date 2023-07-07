@@ -1,0 +1,14 @@
+insertLeft( root, 12 );
+    // insertRight( root, 9 );
+    // insertLeft( root->left, 5 );
+    // insertRight( root->left, 6 );
+    // insertLeft( root->right, 5 );
+    // insertRight( root->right, 6 );
+    // insertLeft( root->left->left, 5 );
+    // insertRight( root->left->left, 10 );
+    // insertLeft( root->left->right, 5 );
+    // insertRight( root->left->right, 10 );
+    // insertLeft( root->right->left, 5 );
+    // insertRight( root->right->left, 10 );
+    // insertLeft( root->right->right, 5 );
+    // insertRight( root->right->right, 10 );
