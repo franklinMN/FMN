@@ -96,8 +96,7 @@ int rearrangeString( int position, char *ptr, int cfl ){
         if ( position == cfl )
             position = -1;
         *(ptr + i) = *(temp + (position + 1) );
-        position++;
-        
+        position++;   
     }
     *(ptr+i) = '\0';
     printf("%s\n", ptr);
