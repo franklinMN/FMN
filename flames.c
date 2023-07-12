@@ -1,9 +1,11 @@
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
+#include<ctype.h>
 
-char findFlames( char[], char[], char[] );
+void findFlames( char[], char[], char[] );
 int rearrangeString( int , char *, int  );
+void lowerCasing( char *, int );
 
 int main() {
 
@@ -18,15 +20,19 @@ int main() {
     gets( nameTwo );
 
     n1Lenght = strlen(nameOne);
+
     n2Lenght = strlen(nameTwo);
 
-    char c = findFlames( flames, nameOne, nameTwo );
+    lowerCasing(nameOne, n1Lenght);
 
-    
+    lowerCasing(nameTwo, n2Lenght);
+
+    findFlames( flames, nameOne, nameTwo );
+
     return 0;
 }
 
-char findFlames( char flames[], char n1[], char n2[] ) {
+void findFlames( char flames[], char n1[], char n2[] ) {
 
     // PART 1 : This for loop is used to cancel the same letters.....
     for( int i=0 ; n1[i]!='\0' ; i++) {
@@ -58,7 +64,6 @@ char findFlames( char flames[], char n1[], char n2[] ) {
 
     //PART 3 : Calculate flames based on the total length "count"
     int currentFLen = 5;
-    //int checkOver = 1;
     while( currentFLen!=0 ) {
         int length = 0;
         int j=0;
@@ -67,16 +72,12 @@ char findFlames( char flames[], char n1[], char n2[] ) {
                 j = -1;
         }
         currentFLen = rearrangeString( j, &flames[0], currentFLen );
-        // if ( currentFLen == 0 ) {
-        //     break;
-        // }
     }
     //PART 3 ENDS....
     printf("\n-----------------\n");
     //printf("%s", flames);
 
-    switch (flames[0])
-    {
+    switch (flames[0]) {
         case 'F': puts("FRIENDS"); break;
         case 'L': puts("LOVE"); break;
         case 'A': puts("AFFECTION"); break;
@@ -100,5 +101,17 @@ int rearrangeString( int position, char *ptr, int cfl ){
     }
     *(ptr+i) = '\0';
     printf("%s\n", ptr);
+    free(temp);
     return cfl - 1;
+}
+
+void lowerCasing( char *ptr, int lenght ) {
+    char *temp = malloc(lenght*sizeof(char));
+    strcpy( temp, ptr );
+    int i=0;
+    while( *(temp+i) ) {
+        *(ptr+i) = (char)tolower( *(temp+i) );
+        i++;
+    }
+    free(temp);
 }
