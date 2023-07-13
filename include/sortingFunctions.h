@@ -22,7 +22,7 @@ void swap( int *data1, int *data2 ) {
     *data2 = temp;
 }
 
-void selectionSort( int *array, int len ) {
+void selectionSortASC( int *array, int len ) {
     int *minValue;
     printf( "\nSelection sort process...\n" );
     for( int step = 0 ; step<len-1 ; step++ ) {
@@ -36,13 +36,41 @@ void selectionSort( int *array, int len ) {
     }
 }
 
-void bubbleSort( int *array, int len ) {
+void selectionSortDSC( int *array, int len ) {
+    int *maxValue;
+    printf( "\nSelection sort process...\n" );
+    for( int step = 0 ; step<len-1 ; step++ ) {
+        maxValue =  array+step ;
+        for( int j = step+1 ; j<len; j++ ) {
+            if ( *(array+j) > *maxValue )
+                maxValue = array+j;
+        }
+        swap(array+step, maxValue);
+        displayArrayInt( array, len );
+    }
+}
+
+void bubbleSortDSC( int *array, int len ) {
     //int *minValue;
     printf( "\nBubble sort process...\n" );
     for( int i=0 ; i<len-1 ; i++ ){
         //minValue = array+i;
-        for( int j=i+1 ; i<len ; j++ ) {
+        for( int j=i+1 ; j<len ; j++ ) {
             if( *(array+i) < *(array+j) ) {
+                swap( array+i , array+j );
+            }
+        }
+        displayArrayInt( array, len );
+    }
+}
+
+void bubbleSortASC( int *array, int len ) {
+    //int *minValue;
+    printf( "\nBubble sort process...\n" );
+    for( int i=0 ; i<len-1 ; i++ ){
+        //minValue = array+i;
+        for( int j=i+1 ; j<len ; j++ ) {
+            if( *(array+i) > *(array+j) ) {
                 swap( array+i , array+j );
             }
         }
