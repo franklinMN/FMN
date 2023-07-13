@@ -4,7 +4,7 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "D:\\FRANKLIN\\From Git\\C-Programs-FMN"
+                //"D:\\FRANKLIN\\From Git\\C-Programs-FMN"
             ],
             "defines": [
                 "_DEBUG",
