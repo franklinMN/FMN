@@ -10,7 +10,7 @@ int main() {
     printf("\n\nList BEFORE sorting...\n");
     displayArrayInt(array, lenght);
 
-    selectionSort( &array[0], lenght );
+    bubbleSort( &array[0], lenght );
 
     printf("\n\nList AFTER sorting...\n");
     displayArrayInt( array, lenght );
