@@ -37,7 +37,7 @@ void findFlames( char flames[], char n1[], char n2[] ) {
     // PART 1 : This for loop is used to cancel the same letters.....
     for( int i=0 ; n1[i]!='\0' ; i++) {
         //printf( "%c ", n1[i] );
-        for( int j=0 ; n2[j] ; j++ ) {
+        for( int j=0 ; n2[j]!='\0' ; j++ ) {
             if ( n1[i] == n2[j] ) {
                 n1[i] = n2[j] = '0';
                 break;
